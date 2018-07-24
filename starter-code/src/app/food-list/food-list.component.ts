@@ -16,7 +16,7 @@ export class FoodListComponent implements OnInit {
     desaparecer: false
   }
   list: Array<object>=[]
-
+  totalcalories:number = 0
 
   ngOnInit() {
     this.product = foods
@@ -32,6 +32,7 @@ export class FoodListComponent implements OnInit {
 
   add (food){
     this.list.push(food);
+    this.totalcalories += food.calories
     console.log(this.list)
   }
 }
