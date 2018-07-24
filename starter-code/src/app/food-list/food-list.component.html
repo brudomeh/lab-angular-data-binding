@@ -1,3 +1,35 @@
-<p>
-  food-list works!
-</p>
+<form action="">
+  <input type="text" placeholder="pizza" [(ngModel)]='patern' name="patern">
+</form>
+
+<div [ngClass]="apear">
+<input type="text" [(ngModel)]="newFood.name" placeholder="food0" name='name'>
+<input type="text" [(ngModel)]="newFood.calories" placeholder="nº calories" name='calories'>
+<input type="text" [(ngModel)]="newFood.image" placeholder="URL image" name='image'>
+<button (click)="addFood()"> add food </button>
+</div>
+
+<div class="global">
+
+  <div *ngFor="let food of product| filter : 'name' : patern" class="card">
+    <h4>{{food.name}}</h4>
+    <h5>{{food.calories}}</h5>
+
+    <div class="image"><img [src]="food.image" alt=""></div>
+
+    <button (click)="add(food)">add to my foods list</button>
+
+  </div>
+</div>
+
+<h2>Todayś Foods</h2>
+<div class="global">
+    <div *ngFor="let new of list" class="card">
+        <h4>{{new.name}}</h4>
+        <h5>{{new.calories}}</h5>
+    
+        <div class="image"><img [src]="new.image" alt=""></div>
+    
+    
+      </div>
+</div>

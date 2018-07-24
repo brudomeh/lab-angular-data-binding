@@ -1,0 +1,35 @@
+.global{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.card{
+    width: 20%;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+.image{
+    height: 200px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.desaparecer{
+    display: none;
+}
+
+h2{
+    text-align: center;
+    margin-top: 80px
+}
+
+.today{
+}
