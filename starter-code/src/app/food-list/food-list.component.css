@@ -37,3 +37,7 @@ h2{
 h4{
     display: block;
 }
+
+.numero{
+    display: none;
+}

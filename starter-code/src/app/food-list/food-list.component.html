@@ -25,7 +25,7 @@
 <h2>Todayś Foods</h2>
     <ul *ngFor="let new of list">
        
-      <li> <h4>{{new.name}} x{{new.quantity}}</h4></li>    
+      <li> <h4>{{new.name}} </h4><h4 [ngClass]="repeat">x{{new.quantity}}</h4></li>    
 
       </ul>
 

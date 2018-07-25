@@ -18,7 +18,9 @@ export class FoodListComponent implements OnInit {
   list: Array<object>=[]
 
   totalcalories:number = 0
-  repeat:boolean = false
+  repeat = {
+    numero: true
+  }
 
   ngOnInit() {
     this.product = foods
@@ -34,9 +36,12 @@ export class FoodListComponent implements OnInit {
 
   add (food){
     if (this.list.some(e => e["name"] === food.name)) {
+      this.repeat.numero = false
       this.list[this.list.indexOf(food)]['quantity'] ++
     }else{
       this.list.push(food);
+      this.list[this.list.indexOf(food)]['quantity'] ++
+
     }
     this.totalcalories += food.calories
     console.log(this.list)
